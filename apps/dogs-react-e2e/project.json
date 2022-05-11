@@ -1,0 +1,27 @@
+{
+  "sourceRoot": "apps/dogs-react-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/dogs-react-e2e/cypress.json",
+        "devServerTarget": "dogs-react:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "dogs-react:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/dogs-react-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["dogs-react"]
+}

@@ -1,0 +1,27 @@
+{
+  "sourceRoot": "apps/dogs-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/dogs-e2e/cypress.json",
+        "devServerTarget": "dogs:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "dogs:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/dogs-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["dogs"]
+}
