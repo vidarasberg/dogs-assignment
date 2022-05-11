@@ -7,7 +7,7 @@ GET /api/dogs
 GET /api/dogs/:id
 ```
 
-Two boilerplates have been set up, one using Angular and one using React, however you are free to use any framework you like, and you can scaffold it using [nx]()
+Two boilerplates have been set up, one using Angular and one using React, however you are free to use any framework you like, and you can scaffold it using [nx](https://nx.dev/)
 
 ## Prerequisites
 
