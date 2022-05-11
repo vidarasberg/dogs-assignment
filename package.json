@@ -6,7 +6,7 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
-    "seed": "ts-node -O '{\"module\":\"commonjs\", \"experimentalDecorators\": true, \"emitDecoratorMetadata\": true}' ./apps/api/src/seed.ts",
+    "seed": "ts-node -P ./apps/api/tsconfig.seed.json ./apps/api/src/seed.ts",
     "build": "nx build",
     "test": "nx test",
     "test:all": "nx run-many --all --target=test --parallel"
