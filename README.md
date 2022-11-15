@@ -1,11 +1,24 @@
 # DOGS!
 
-Your task is to create a frontend for our Dogs service. The dogs service is fairly simple. It provides two endpoints, one for getting all dogs and one for getting a specific dog. The API is available on localhost:3333/api
+## About
+
+Welcome to the Wehype Dogs Assignment! We have prepared a Dog API for you that lists all our nice dogs, available at `http://localhost:3333/api/dogs`. Your task is to create a frontend that, given a Dog ID, will display all related dogs sorted by how related they are. A dog is related to another if their breeds are the same and their age is no more than 3 years apart. The closer they are in age the more related they are, they are also more related if they share a gender.
+
+### Example
 
 ```
-GET /api/dogs
-GET /api/dogs/:id
+Bob:    Labrador, 5 years, Male
+Duke:   Labrador, 3 years, Male
+McGee:  Labrador, 1 years, Male
+Lassie: Shepherd, 2 years, Female
+Scoot:  Shepherd, 4 years, Male
 ```
+
+In the example above, `Bob` and `Duke` are related since they are both Labradors, their age difference is only two years (5 - 3). For an added bonus, they are both male so they are a bit more related. `Duke` is also related to `McGee` since they are also both Labradors and their age difference is only one year (2 - 1), however `Bob` and `McGee` aren't related since their age difference is four (5 - 1).
+
+`Lassie` and `Scoot` are also related, since they are both Shepherds and their age difference is 2 (4 - 2), but they would be less related than Lassie and another Female Shepherd.
+
+So, given `Duke` in the example above, the related dogs would be, in order, [`Mcgee`, `Bob`].
 
 Two boilerplates have been set up, one using Angular and one using React, however you are free to use any framework you like, and you can scaffold it using [nx](https://nx.dev/)
 

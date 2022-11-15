@@ -1,6 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { DogEntity } from './dog.entity';
-
 import { DogService } from './dog.service';
 
 @Controller('dogs')
@@ -13,7 +12,7 @@ export class DogsController {
   }
 
   @Get(':id')
-  async getDogById(id: number): Promise<DogEntity | undefined> {
+  async getDogById(@Param('id') id: string): Promise<DogEntity | undefined> {
     return this.dogsService.getById(id);
   }
 }

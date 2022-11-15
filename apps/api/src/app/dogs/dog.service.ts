@@ -16,7 +16,7 @@ export class DogService {
     return this.dogsRepository.find();
   }
 
-  async getById(id: number) {
-    return this.dogsRepository.findOne(id);
+  async getById(id: string) {
+    return this.dogsRepository.findOne({ where: { id } });
   }
 }

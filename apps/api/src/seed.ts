@@ -6,14 +6,19 @@ import { v4 } from 'uuid';
 import { DogService } from './app/dogs/dog.service';
 
 async function seed() {
-  const length = 5000;
-  const dogs: DogEntity[] = Array.from({ length }, (_, i) => ({
-    id: v4(),
-    name: faker.name.middleName(i % 2 === 0 ? 'male' : 'female'),
-    breed: faker.animal.dog(),
-    age: faker.random.numeric(1),
-    photoUrl: faker.image.animals(1000, 750),
-  }));
+  const length = 3000;
+  const dogs: DogEntity[] = Array.from({ length }, (_, i) => {
+    const gender = i % 2 === 0 ? 'male' : 'female';
+
+    return {
+      id: v4(),
+      name: faker.name.middleName(gender),
+      breed: faker.animal.dog(),
+      gender,
+      age: Number(faker.random.numeric(1)),
+      photoUrl: faker.image.animals(1000, 750),
+    };
+  });
 
   const app = await NestFactory.createApplicationContext(AppModule);
 

@@ -12,7 +12,10 @@ export class DogEntity {
   breed: string;
 
   @Column()
-  age: string;
+  age: number;
+
+  @Column()
+  gender: string;
 
   @Column()
   photoUrl: string;
