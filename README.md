@@ -31,26 +31,20 @@ Two boilerplates have been set up, one using Angular and one using React, howeve
 
 ## Installation
 
-### Install all the required dependencies
 
 ```bash
+# install the dependencies
 npm install
-```
 
-### Create the database
-
-```bash
+# Create the database
 cd ./apps/api/
 docker-compose up -d
+
+# Seed the database
+npm run seed
 ```
 
 **Note: If you are NOT running on Apple M1 chips, comment out the `platform` line in the `docker-compose.yml` file to target your own processor architecture**
-
-### Seed the database
-
-```bash
-npm run seed
-```
 
 ## Running on your machine
 
