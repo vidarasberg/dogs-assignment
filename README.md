@@ -6,13 +6,13 @@ Welcome to the Wehype Dogs Assignment! We have prepared a Dog API for you that l
 
 ### Example
 
-```
-Bob:    Labrador, 5 years, Male
-Duke:   Labrador, 3 years, Male
-McGee:  Labrador, 1 years, Male
-Lassie: Shepherd, 2 years, Female
-Scoot:  Shepherd, 4 years, Male
-```
+|name|breed|age|gender
+|--|--|--|--|
+Bob|Labrador|5 years|Male
+Duke|Labrador|3 years|Male
+McGee|Labrador|1 years|Male
+Lassie|Shepherd|2 years|Female
+Scoot|Shepherd|4 years|Male
 
 In the example above, `Bob` and `Duke` are related since they are both Labradors, their age difference is only two years (5 - 3). For an added bonus, they are both male so they are a bit more related. `Duke` is also related to `McGee` since they are also both Labradors and their age difference is only one year (2 - 1), however `Bob` and `McGee` aren't related since their age difference is four (5 - 1).
 
