@@ -20,8 +20,10 @@ Two boilerplates have been set up, one using Angular and one using React, howeve
 
 ### Install all the required dependencies
 
+--legacy-peer-deps is not optimal att would be fixed if I had more time
+
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 ### Create the database
@@ -41,7 +43,7 @@ npm run seed
 
 ## Running on your machine
 
-In one terminal run `npm start api` and in another serve whatever frontend you want to work on: .e.g `npm start dogs` or `npm start dogs-react`.
+In one terminal run `npm start api` and in another serve `npm start dogs-react`.
 
 ## Fetching from the API
 
